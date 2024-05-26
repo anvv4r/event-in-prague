@@ -10,15 +10,15 @@ class Event {
 
 async function getData() {
   const response = await fetch(
-    "https://test-api.codingbootcamp.cz/api/7d93abe3/events"
+    "https://test-api.codingbootcamp.cz/api/72291a73/events"
   );
   const data = await response.json();
 
   // Get the last 6 items from data
-  // const lastSixItems = data.slice(-6);
+  const lastSixItems = data.slice(-9);
 
   // Assuming each item in data is an object with properties that match the parameters of the Event constructor
-  const events = data.map(
+  const events = lastSixItems.map(
     (item) =>
       new Event(item.id, item.name, item.date, item.description, item.image_url)
   );
@@ -105,7 +105,7 @@ async function getData() {
   `;
 
     // Append the event element to the appropriate container
-    // If this is the last event, append it to .event-main (index === events.length - 1)
+    // If this is the last event, append it to .event__feature (index === events.length - 1)
     // (index === 0) means this is the first event
     if (index === 0) {
       document.querySelector(".event__feature").appendChild(eventElm);
