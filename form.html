@@ -9,25 +9,28 @@
 </head>
 
 <body>
-    <form onSubmit={handleSubmit}>
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required placeholder="George"><br><br>
+    <section class="form__container">
+        <h2>Registration Form</h2>
+        <form onSubmit="">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required placeholder="George"><br><br>
 
-        <label for="surname">Surname:</label>
-        <input type="text" id="surname" name="surname" required placeholder="Smith"><br><br>
+            <label for="surname">Surname:</label>
+            <input type="text" id="surname" name="surname" required placeholder="Smith"><br><br>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required placeholder="example@gmail.com"><br><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required placeholder="example@gmail.com"><br><br>
 
-        <label for="phone">Phone Number:</label>
-        <input type="text" id="phone" name="phone" required placeholder="+420 123 456 789"><br><br>
+            <label for="phone">Phone Number:</label>
+            <input type="text" id="phone" name="phone" required placeholder="+420123456789"><br><br>
 
-        <label for="age">I'm old enough to participate:</label><br>
-        <input type="radio" id="age" name="age" value="yes" required>Yes<br>
-        <input type="radio" id="age" name="age" value="no">No<br><br>
+            <input type="checkbox" id="age" name="age" value="yes" required>
+            &nbsp;<label for="age">I'm old enough to participate.</label><br><br>
 
-        <button type="submit">Submit</button>
-    </form>
+            <button type="submit">Register</button>
+        </form>
+    </section>
+
 </body>
 
 </html>
